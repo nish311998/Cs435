@@ -1,0 +1,69 @@
+// Nishanth Gona cs435 8111 mp
+
+Java Version:
+
+
+java -version
+
+java version "10.0.2" 2018-07-17
+Java(TM) SE Runtime Environment 18.3 (build 10.0.2+13)
+Java HotSpot(TM) 64-Bit Server VM 18.3 (build 10.0.2+13, mixed mode)
+
+
+
+
+
+Notes:
+
+There are no bugs seen as long as command prompt is used as shown in the p1435s19 document.
+
+Only bug I have seen is if I am running in AFS I need to comment line which declares which package(eg. "package cs435;") we are using. This line is necessary in the eclipse but not when running in terminal.
+
+
+When running pagerank_8111.java you will get a statement saying "Note: pagerank_8111.java uses unchecked or unsafe operations.
+Note: Recompile with -Xlint:unchecked for details." but the program will still work accordingly
+
+
+Hashing:
+
+
+
+Assumptions:
+
+
+
+HashFull: I did not print or return any value simply checked if both T and A were full. In addition, I used HashFull with HashInsert when we had "overflow" with T or ran out of space in A and updated it accordingly.
+
+
+
+HashEmpty: Simply checks if array A and T are full does not return or print any values. Wanted to implement a way to decrease array T and A back to original size if either were increased and they were both empty but decided against because it was not specified in notes.
+
+
+
+Did not return any values for any functions
+
+
+
+
+Error:
+
+If m is declared to be a very small value then there are certain instance where I have a stack overflow error.
+
+If string being inserted is very large over 100 characters sometimes I get a stack overflow error.
+
+
+
+
+PageRank:
+
+
+
+Assumptions:
+
+
+For output assumed decimal values up to 6 decimal places
+
+
+
+Also for negative iteration value only allowed between -2 and -6 will not work for others. So, it will produce output for iteration value
+of 0, -6 to -2, and greater than zero.
